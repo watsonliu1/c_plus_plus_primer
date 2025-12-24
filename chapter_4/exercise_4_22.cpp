@@ -1,0 +1,32 @@
+#include <iostream>
+
+using std::cout;
+using std::endl;
+
+using std::string;
+using std::vector;
+
+int main()
+{
+    int grade = 85;
+
+#if 0
+    string finalgrade = (grade > 90) ? "high pass" : (grade > 75) ? "pass"
+                                                 : (grade > 60)   ? "low pass"
+                                                                  : "fail";
+    cout << finalgrade << endl;
+#endif
+
+    string finalgrade;
+    if (grade > 90)
+        finalgrade = "high pass";
+    else if (grade > 75)
+        finalgrade = "pass";
+    else if (grade >= 60)
+        finalgrade = "low pass";
+    else
+        finalgrade = "fail";
+    cout << finalgrade << endl;
+
+    return 0;
+}
